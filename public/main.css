@@ -22,10 +22,62 @@ ol {
     box-shadow: 0px 0px 10px 0px #00000040;
     transition: background-color 200ms ease;
     font-family: 'IBM Plex Mono';
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:focus {
+    box-shadow: 0px 0px 10px 0px #00000040 !important;
 }
 
 .btn:hover {
     background-color: rebeccapurple;
+}
+
+.btn--alt {
+    background-color: skyblue;
+    height: 100%;
+    font-size: 12px;
+    font-weight: bold;
+    color: #3c3c3c;
+    padding: 0px 8px;
+}
+
+.btn--arrow {
+    position: relative;
+    transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
+}
+
+.btn--arrow:hover {
+    background-color: gainsboro;
+    color: #2c2c2c;
+}
+
+.btn--arrow:hover::after {
+    right: -32px;
+}
+
+.btn--arrow::after {
+    content: '>';
+    position: absolute;
+    font-family: 'system-ui';
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 70px;
+    right: 32px;
+    z-index: -1;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    font-size: 48px;
+    font-weight: 900;
+    height: 100%;
+    width: 32px;
+    background-color: floralwhite;
+    transition: right 200ms ease-in-out;
 }
 
 table {
@@ -179,13 +231,13 @@ form {
     margin: 0px auto;
 }
 
-.nav ul li .btn {
+.nav ul li .btn:not(.btn--alt) {
     height: 100%;
     box-shadow: none;
     background-color: rgba(138, 43, 226, 0.6);
 }
 
-.nav ul li .btn:hover {
+.nav ul li .btn:not(.btn--arrow):hover {
     background-color: rgba(138, 43, 226, 1);
 }
 

@@ -1,0 +1,12 @@
+@import 'partials/reset.css';
+
+body {
+    background-color: #5c5c5c;
+}
+
+.main {
+    max-width: 1024px;
+    padding: 24px;
+    margin: auto;
+    border: 1px solid #3c3c3c;
+}

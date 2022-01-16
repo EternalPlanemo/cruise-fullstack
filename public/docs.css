@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    outline: none;
+    border: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+body {
+    background-color: #5c5c5c;
+}
+
+.main {
+    max-width: 1024px;
+    padding: 24px;
+    margin: auto;
+    border: 1px solid #3c3c3c;
+}

@@ -10,13 +10,13 @@
     margin: 0px auto;
 }
 
-.nav ul li .btn {
+.nav ul li .btn:not(.btn--alt) {
     height: 100%;
     box-shadow: none;
     background-color: rgba(138, 43, 226, 0.6);
 }
 
-.nav ul li .btn:hover {
+.nav ul li .btn:not(.btn--arrow):hover {
     background-color: rgba(138, 43, 226, 1);
 }
 
