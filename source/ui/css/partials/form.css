@@ -1,0 +1,21 @@
+form {
+    width: max-content;
+    color: lightgoldenrodyellow;
+}
+
+.form__head {
+    color: rebeccapurple;
+    text-shadow: 0px 0px 1px lightgoldenrodyellow;
+    padding-bottom: 8px;
+}
+
+.form__body {
+    background-color: #00000060;
+}
+
+.form__controls {
+    padding-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

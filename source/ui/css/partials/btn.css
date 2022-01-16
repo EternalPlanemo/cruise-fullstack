@@ -1,0 +1,16 @@
+.btn {
+    padding: 8px 32px;
+    height: 50px;
+    background-color: blueviolet;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    box-shadow: 0px 0px 10px 0px #00000040;
+    transition: background-color 200ms ease;
+    font-family: 'IBM Plex Mono';
+}
+
+.btn:hover {
+    background-color: rebeccapurple;
+}

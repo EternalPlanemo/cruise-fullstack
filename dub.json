@@ -1,0 +1,12 @@
+{
+	"authors": [
+		"Georgi Georgiev"
+	],
+	"copyright": "Copyright © 2021, Georgi Georgiev",
+	"dependencies": {
+		"vibe-d": "~>0.9.4"
+	},
+	"description": "Cruise model",
+	"license": "LGPLv2",
+	"name": "oop-project"
+}
