@@ -24,9 +24,19 @@ void main(string[] args)
 
     auto ct1 = new CruiseType("Bucharest", "Kulcs", Type.EXPRESS, Date(2022, 1, 12), Date(2022, 2, 28), 700);
 
+    auto ct2 = new CruiseType("Bucharest", "Budapest", Type.PASSANGER, Date(2022, 2, 4), Date(2022, 2, 20), 950);
+    ct2.addIntermediateStop("Tarnovo", Date(22, 2, 5));
+    ct2.addIntermediateStop("Vidin", Date(22, 2, 6));
+    ct2.addIntermediateStop("Belgrade", Date(22, 2, 10));
+
+    auto ct3 = new CruiseType("Osijek", "Budapest", Type.EXPRESS, Date(2022, 2, 11), Date(2022, 2, 18), 640);
+    ct3.addIntermediateStop("Kalocsa", Date(22, 2, 13));
+
     CruiseType[] cruises;
     cruises ~= ct0;
     cruises ~= ct1;
+    cruises ~= ct2;
+    cruises ~= ct3;
     auto cn = new CruiseNetwork(cruises);
 
     auto router = new URLRouter;
