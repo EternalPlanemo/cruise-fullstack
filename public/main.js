@@ -121,7 +121,6 @@ $(function() {
     }
 
     $('.nav .btn').on('click', function(e) {
-        e.preventDefault();
         const inner = e.target.innerHTML;
         const rpcName = inner.toLowerCase().replace(/\s/g, '-');
 
