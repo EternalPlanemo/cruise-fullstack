@@ -11,5 +11,8 @@
 - Build frontend: `npm run build`
 
 # Start the project
+Run `npm run deploy` to install everything and start the server.
+
+### Run manually
 - Run the server: `dub run` or run the generated executable `./oop-project`
 - Open `localhost:8080` in a browser
