@@ -11,7 +11,7 @@ ol {
     list-style: none;
 }
 body {
-    background-color: #5c5c5c;
+    background-color: #2c2c2c;
 }
 
 .main {
@@ -19,4 +19,81 @@ body {
     padding: 24px;
     margin: auto;
     border: 1px solid #3c3c3c;
+    border-radius: 8px;
+    color: white;
+}
+
+.main__head,
+.section:not(:last-child) {
+    margin-bottom: 32px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid whitesmoke;
+}
+
+code {
+    padding: 4px;
+    background-color: crimson;
+    border-radius: 4px;
+}
+
+.methods {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    font-size: 13px;
+}
+
+.methods .signature {
+    padding: 4px;
+    background-color: #3c3c3c;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    
+}
+
+.output,
+.inputs {
+    position: relative;
+    padding-top: 8px;
+    margin-top: 16px;
+}
+
+.inputs::before {
+    content: 'Inputs:';
+    position: absolute;
+    top: -10px;
+    left: 0px;
+    display: block;
+    font-size: 13px;
+}
+
+.type {
+    color: lightskyblue;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.var {
+    color: goldenrod;
+    font-style: italic;
+}
+
+.output::before {
+    content: 'Outputs:';
+    position: absolute;
+    top: -10px;
+    left: 0px;
+    display: block;
+    font-size: 13px;
+}
+
+.method {
+    color: lightseagreen;
+}
+
+.object {
+    font-size: 13px;
+    font-weight: bold;
+    color: palevioletred
 }

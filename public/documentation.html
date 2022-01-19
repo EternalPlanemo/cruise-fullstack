@@ -10,11 +10,324 @@
 <body>
     <main class="main">
         <div class="main__head">
+            <h1>
+                Круизи (модификация на проекта за влакове)
+            </h1>
 
+            Изработил: Георги Христов Георгиев, ф.н.: 19621391, 1Б група
         </div>
 
         <div class="main__body">
+            <div class="section">
+                <p>
+                    Проектът е направен главно с <strong>D</strong><sup><a href="http://dlang.org">dlang.org</a></sup>. Интерфейса е доста примитивен. Генерирам повечето от HTML-а с JavaScript string template-и.
+                </p>
+            </div>
 
+            <div class="section">
+                <div class="section__head">
+                    <h3>
+                        UML диаграма на класовете
+                    </h3>
+                </div>
+
+                <div class="section__body">
+                    <img src="/images/uml.svg" alt="">
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section__head">
+                    <h3>
+                        Cruise методи
+                    </h3>
+                </div>
+
+                <div class="section__body">
+                    <ul class="methods">
+                        <li>
+                            <h5 class="signature">
+                                <span class="type">void </span><span class="method">print</span>()
+                            </h5>
+
+                            <ul class="inputs">
+                                <li class="input">
+                                    <h5 class="type">
+                                        void
+                                    </h5>
+                                </li>
+                            </ul>
+
+                            <div class="output">
+                                Принтира атрибутите на обекта в <code>stdout</code> в <code>JSON</code> формат.
+                            </div>
+                        </li>
+
+                        <li>
+                            <h5 class="signature">
+                                <span class="type">string </span><span class="method">toJson</span>()
+                            </h5>
+
+                            <ul class="inputs">
+                                <li class="input">
+                                    <h5 class="type">
+                                        void
+                                    </h5>
+                                </li>
+                            </ul>
+
+                            <div class="output">
+                                JSON <span class="type">string</span>
+                            </div>
+                        </li>
+
+                        <li>
+                            <h5 class="signature">
+                                <span class="type">string </span><span class="method">getFromCity</span>()
+                            </h5>
+
+                            <ul class="inputs">
+                                <li class="input">
+                                    <h5 class="type">
+                                        void
+                                    </h5>
+                                </li>
+                            </ul>
+
+                            <div class="output">
+                                <span class="type">string</span>
+                            </div>
+                        </li>
+
+                        <li>
+                            <h5 class="signature">
+                                <span class="type">string </span><span class="method">getToCity</span>()
+                            </h5>
+
+                            <ul class="inputs">
+                                <li class="input">
+                                    <h5 class="type">
+                                        void
+                                    </h5>
+                                </li>
+                            </ul>
+
+                            <div class="output">
+                                <h5 class="type">string</h5>
+                            </div>
+                        </li>
+
+                        <li>
+                            <h5 class="signature">
+                                <span class="object">Date </span><span class="method">getStartDate</span>()
+                            </h5>
+
+                            <ul class="inputs">
+                                <li class="input">
+                                    <h5 class="type">
+                                        void
+                                    </h5>
+                                </li>
+                            </ul>
+
+                            <div class="output">
+                                <h5 class="type">string</h5>
+                            </div>
+                        </li>
+
+                        <li>
+                            <h5 class="signature">
+                                <span class="type">int </span><span class="method">getId</span>()
+                            </h5>
+
+                            <ul class="inputs">
+                                <li class="input">
+                                    <h5 class="type">
+                                        void
+                                    </h5>
+                                </li>
+                            </ul>
+
+                            <div class="output">
+                                <h5 class="type">int</h5>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section__head">
+                    <h3>
+                        CruiseType методи
+                    </h3>
+                </div>
+
+                <div class="section__body">
+                    <ul class="methods">
+                        <li>
+                            <h5 class="signature">
+                                <span class="type">void </span><span class="method">addIntermediateStop</span>(<span class="type">string</span> <span class="var">city</span>, <span class="object">Date</span> <span class="var">date</span>)
+                            </h5>
+
+                            <ul class="inputs">
+                                <li class="input">
+                                    <h5 class="type">
+                                        string
+                                    </h5>
+                                </li>
+
+                                <li class="input">
+                                    <h5 class="object">
+                                        Date
+                                    </h5>
+                                </li>
+                            </ul>
+
+                            <div class="output">
+                                <span class="type">void</span>
+                            </div>
+                        </li>
+
+                        <li>
+                            <h5 class="signature">
+                                <span class="type">void</span> <span class="method">regenerateDistances</span>(<span class="type">int</span> <span class="var">adjust</span>)
+                            </h5>
+
+                            <ul class="inputs">
+                                <li class="input">
+                                    <h5 class="type">
+                                        int
+                                    </h5>
+                                </li>
+                            </ul>
+
+                            <div class="output">
+                                <span class="type">void</span>
+                            </div>
+
+                            <p>
+                                Генерира псевдо-случайни дистанции на междинните спирки.
+                            </p>
+                        </li>
+
+                        <li>
+                            <h5 class="signature">
+                                <span class="object">City</span>[] <span class="method">getIntermediateStops</span>()
+                            </h5>
+
+                            <ul class="inputs">
+                                <li class="input">
+                                    <h5 class="type">
+                                        void
+                                    </h5>
+                                </li>
+                            </ul>
+
+                            <div class="output">
+                                <span class="object">City</span>[]
+                            </div>
+                        </li>
+
+                        <li>
+                            <h5 class="signature">
+                                <span class="type">void </span><span class="method">print</span>()
+                            </h5>
+
+                            <ul class="inputs">
+                                <li class="input">
+                                    <h5 class="type">
+                                        void
+                                    </h5>
+                                </li>
+                            </ul>
+
+                            <div class="output">
+                                Принтира атрибутите на обекта в <code>stdout</code> в <code>JSON</code> формат.
+                            </div>
+                        </li>
+
+                        <li>
+                            <h5 class="signature">
+                                <span class="type">string </span><span class="method">toJson</span>()
+                            </h5>
+
+                            <ul class="inputs">
+                                <li class="input">
+                                    <h5 class="type">
+                                        void
+                                    </h5>
+                                </li>
+                            </ul>
+
+                            <div class="output">
+                                JSON <span class="type">string</span>
+                            </div>
+                        </li>
+
+
+                        <li>
+                            <h5 class="signature">
+                                <span class="type">long</span> <span class="method">getTravelTime</span>()
+                            </h5>
+
+                            <ul class="inputs">
+                                <li class="input">
+                                    <h5 class="type">
+                                        void
+                                    </h5>
+                                </li>
+                            </ul>
+
+                            <div class="output">
+                                <span class="type">string</span> <code>дни</code>
+                            </div>
+                        </li>
+
+                        <li>
+                            <h5 class="signature">
+                                <span class="type">float </span><span class="method">getAverageSpeed</span>()
+                            </h5>
+
+                            <ul class="inputs">
+                                <li class="input">
+                                    <h5 class="type">
+                                        void
+                                    </h5>
+                                </li>
+                            </ul>
+
+                            <div class="output">
+                                <h5 class="type">float</h5>
+                            </div>
+                        </li>
+
+                        <li>
+                            <h5 class="signature">
+                                <span class="type">void</span> <span class="method">advancePosition</span>()
+                            </h5>
+
+                            <ul class="inputs">
+                                <li class="input">
+                                    <h5 class="type">
+                                        void
+                                    </h5>
+                                </li>
+                            </ul>
+
+                            <div class="output">
+                                <h5 class="type">void</h5>
+                            </div>
+
+                            <p>
+                                Неимплементиран метод - мислех да добавя симулация на състоянието/позицията
+                                <br>
+                                на круиза, но няма време.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </main>
 </body>
