@@ -10,7 +10,6 @@ $(function() {
     window.socket.onmessage = function(message) {	
         const res = JSON.parse(message.data);
         const $tbody = $('.form__body table tbody');
-        // console.log(res);
         $tbody.empty();
 
         const render = (cruise) => {

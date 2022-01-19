@@ -88,7 +88,7 @@ class CruiseNetwork
 
         for (int i = 0; i < cruises.length; ++i) {
             if (cruises[i].getType() == t)
-            result ~= cruises[i].toJson();
+            result ~= cruises[i].toJson() ~ ", ";
         }
 
         result = result.strip(", ");
