@@ -13,3 +13,5 @@ oop-project-test-*
 *.o
 *.obj
 *.lst
+node_modules/
+.vscode
