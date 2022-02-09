@@ -100,7 +100,7 @@ void main(string[] args)
             else if (rpc == "search-by-start-date") {
                 auto input = parseJsonString(json["input"].to!string);
                 auto fromCity = input["from-city"].to!string;
-               auto toCity = input["to-city"].to!string;
+                auto toCity = input["to-city"].to!string;
                 auto date = input["date"].to!string;
 
                 auto res = cn.getCruisesBeforeStartDate(fromCity, toCity, date);

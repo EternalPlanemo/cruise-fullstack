@@ -85,3 +85,8 @@ code {
     font-weight: bold;
     color: palevioletred
 }
+
+.list {
+    list-style: circle;
+    padding-left: 14px;
+}

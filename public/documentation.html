@@ -6,6 +6,123 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Documentation</title>
     <link rel="stylesheet" href="docs.css">
+
+    <style>
+        body {
+    background-color: #2c2c2c;
+}
+
+.main {
+    max-width: 1024px;
+    padding: 24px;
+    margin: auto;
+    border: 1px solid #3c3c3c;
+    border-radius: 8px;
+    color: white;
+}
+
+.section__head {
+    padding-bottom: 16px;
+}
+
+.main__head,
+.section:not(:last-child) {
+    margin-bottom: 32px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid whitesmoke;
+}
+
+code {
+    padding: 4px;
+    background-color: crimson;
+    border-radius: 4px;
+}
+
+.methods {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    font-size: 13px;
+}
+
+.methods .signature {
+    padding: 4px;
+    background-color: #3c3c3c;
+    width: max-content;
+    
+}
+
+.output,
+.inputs {
+    position: relative;
+    padding-top: 8px;
+    margin-top: 16px;
+}
+
+.inputs::before {
+    content: 'Inputs:';
+    position: absolute;
+    top: -10px;
+    left: 0px;
+    display: block;
+    font-size: 13px;
+}
+
+.type {
+    color: lightskyblue;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.var {
+    color: goldenrod;
+    font-style: italic;
+}
+
+.output::before {
+    content: 'Outputs:';
+    position: absolute;
+    top: -10px;
+    left: 0px;
+    display: block;
+    font-size: 13px;
+}
+
+.method {
+    color: lightseagreen;
+}
+
+.object {
+    font-size: 13px;
+    font-weight: bold;
+    color: palevioletred
+}
+
+.list {
+    list-style: circle;
+    padding-left: 14px;
+}
+
+p {
+    text-align: justify;
+}
+
+img {
+    max-width: 100%;
+}
+
+.list--gap li:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.list--gap li p {
+    margin-bottom: 8px;
+}
+
+pre {
+    max-width: 100%;
+}
+    </style>
 </head>
 <body>
     <main class="main">
@@ -19,9 +136,137 @@
 
         <div class="main__body">
             <div class="section">
-                <p>
-                    Проектът е направен главно с <strong>D</strong><sup><a href="http://dlang.org">dlang.org</a></sup>. Интерфейса е доста примитивен. Генерирам повечето от HTML-а с JavaScript string template-и.
-                </p>
+                <div class="section__head">
+                    <h3>
+                        Въведение
+                    </h3>
+                </div>
+
+                <div class="section__body">
+                    <p>
+                        Пътническото плаване в чистата му форма, като превоз на пътници от една точка до друга, само за себе си не е печеливша дейност. За да стане такава успоредно с него трябва да се развиват съпътствшащи, печеливши дейности. Именно такива дейности са круизния туризъм и хотелиерството. Макар и слаба тенденцията към непрекъснатото увеличаване на търсенето в сегмента на круизния туризъм сочи нарастващ интерес към този вид луксозни туристически услуги. Поради тази причина излиза и нужда за софтуер за управляване и откриване на туристическите дестинации.
+                    </p>
+
+                    <br>
+
+                    <p>
+                        Целта на приложението е да предостави достъпна и обновена информация на бъдещите пасажери на избрания от тях круиз. За да се постигнат целите е необходимо да се разгледат следните задачи:
+                    </p>
+
+                    <br>
+
+                    <ul class="list">
+                        <li>
+                            Намиране на круиз по начален и краен град
+                        </li>
+
+                        <li>
+                            Намиране на круиз по начален и краен град и дата на тръгване
+                        </li>
+
+                        <li>
+                            Намиране на круиз по nачален и краен град и дата на пристигане
+                        </li>
+
+                        <li>
+                            Намиране на круиз по nай-бърз от начален град до краен град
+                        </li>
+
+                        <li>
+                            Намиране на круиз по скорост на определен тип (пътнически или експресен)
+                        </li>
+                    </ul>
+
+                    <br>
+
+                    <p>
+                        Проектът е направен главно с <strong>D</strong><sup><a href="http://dlang.org">dlang.org</a></sup>. Интерфейса е доста примитивен. Генерирам повечето от HTML-а с JavaScript string template-и.
+                    </p>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section__head">
+                    <h3>Предимства</h3>
+                </div>
+
+                <div class="section__body">
+                    <p>
+                        Предимствата са че има лесен достъп и интуитивен интерфейс.
+                    </p>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section__head">
+                    <h3>Недостатъци</h3>
+                </div>
+
+                <div class="section__body">
+                    <p>
+                        Недостатъците са, че няма полезни визуални средства като карта, която да показва в реално време местоположението на кораба.
+                    </p>
+                </div>
+            </div>
+        
+            <div class="section">
+                <div class="section__head">
+                    <h3>
+                        Потребителско ръководство
+                    </h3>
+                </div>
+
+                <div class="section__body">
+                    <ul class="list list--gap">
+                        <li>
+                            <p>
+                                Главна страница. Тук могат да се видят всички круизи без филтриране.
+                            </p>
+
+                            <img src="/images/all.png" alt="">
+                        </li>
+
+                        <li>
+                            <p>
+                                Търсене на круиз по начален и краен град. За филтриране на круизите натиснете втория бутон в навигацията и въведете градовете в полетата.
+                            </p>
+
+                            <img src="/images/search-start-from.png" alt="">
+                        </li>
+
+                        <li>
+                            <p>
+                                Търсене на круиз по начален и краен град и начална дата.
+                            </p>
+
+                            <img src="/images/search-start-date.png" alt="">
+                        </li>
+
+                        <li>
+                            <p>
+                                Търсене на круиз по начален и краен град и крайна дата.
+                            </p>
+
+                            <img src="/images/search-arrival-date.png" alt="">
+                        </li>
+
+                        <li>
+                            <p>
+                                Намиране на най-бърз круиз по маршрут.
+                            </p>
+
+                            <img src="/images/find-fastest.png" alt="">
+                        </li>
+
+                        <li>
+                            <p>
+                                Сортиране по скорост и тип.
+                            </p>
+
+                            <img src="/images/sort-by-speed.png" alt="">
+                        </li>
+                    </ul>
+                </div>
             </div>
 
             <div class="section">
@@ -326,6 +571,536 @@
                             </p>
                         </li>
                     </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section__head">
+                    <h3>
+                        Сорс код
+                    </h3>
+                </div>
+
+                <div class="section__body">
+                    <pre>
+module source.main;
+
+import source.cruisetype : CruiseType, Type;
+import source.cruisenetwork;
+import std.datetime.date : Date;
+import std.random;
+import std.stdio;
+import vibe.d;
+import std.file;
+import vibe.core.core : sleep;
+import vibe.core.log;
+import vibe.http.fileserver : serveStaticFiles;
+import vibe.http.router : URLRouter;
+import vibe.http.server;
+import vibe.http.websockets : WebSocket, handleWebSockets;
+import std.conv;
+import std.json;
+
+void main(string[] args)
+{
+    auto ct0 = new CruiseType("Bucharest", "Vienna", Type.PASSANGER, Date(2021, 11, 16), Date(2021, 12, 18), 1000);
+    ct0.addIntermediateStop("Belgrade", Date(2021, 11, 29));
+    ct0.addIntermediateStop("Komarno", Date(2021, 12, 4));
+
+    auto ct1 = new CruiseType("Bucharest", "Kulcs", Type.EXPRESS, Date(2022, 1, 12), Date(2022, 2, 28), 700);
+
+    auto ct2 = new CruiseType("Bucharest", "Budapest", Type.PASSANGER, Date(2022, 2, 4), Date(2022, 2, 20), 950);
+    ct2.addIntermediateStop("Tarnovo", Date(22, 2, 5));
+    ct2.addIntermediateStop("Vidin", Date(22, 2, 6));
+    ct2.addIntermediateStop("Belgrade", Date(22, 2, 10));
+
+    auto ct3 = new CruiseType("Osijek", "Budapest", Type.EXPRESS, Date(2022, 2, 11), Date(2022, 2, 18), 640);
+    ct3.addIntermediateStop("Kalocsa", Date(22, 2, 13));
+
+    CruiseType[] cruises;
+    cruises ~= ct0;
+    cruises ~= ct1;
+    cruises ~= ct2;
+    cruises ~= ct3;
+    auto cn = new CruiseNetwork(cruises);
+
+    auto router = new URLRouter;
+
+    router.get("*", serveStaticFiles("public/"));
+
+    router.get("/css", function(HTTPServerRequest req, HTTPServerResponse res) {
+        auto css = readText(format("public/% s", req.params ["f"]));
+        res.writeBody(css, "text/css");
+    });
+
+    router.get("/js", function(HTTPServerRequest req, HTTPServerResponse res) {
+        auto js = readText(format("public/% s", req.params ["f"]));
+        res.writeBody(js, "text/javascript");
+    });
+
+    router.get("/images", function(HTTPServerRequest req, HTTPServerResponse res) {
+        auto image = readText(format("public/images/% s", req.params ["f"]));
+        res.writeBody(image);
+    });
+
+    router.get("/search", function(HTTPServerRequest req, HTTPServerResponse res) {
+        auto html = readText(format("public/search.html"));
+        res.writeBody(html, "text/html");
+    });
+
+
+
+    router.get("/api", handleWebSockets(delegate(scope WebSocket socket) {
+        while (true) {
+            sleep(1.seconds);
+            if (!socket.connected) break;
+            auto json = parseJsonString(socket.receiveText());
+            auto rpc = json["rpc"];
+
+            writeln("rpc " ~ rpc);
+
+            if (rpc == "show-all") {
+                string result = "[ ";
+
+                for (int i = 0; i < cruises.length; ++i) {
+                    result ~= cruises[i].toJson();
+
+                    if (i != cruises.length - 1) {
+                        result ~= ", ";
+                    }
+                }
+
+                result ~= " ]";
+
+                socket.send(result);
+            }
+            else if (rpc == "search-by-course") {
+                auto input = parseJsonString(json["input"].to!string);
+                auto fromCity = input["from-city"].to!string;
+                auto toCity = input["to-city"].to!string;
+                auto res = cn.getCruisesFromTo(fromCity, toCity);
+
+                socket.send(res);
+            }
+            else if (rpc == "search-by-start-date") {
+                auto input = parseJsonString(json["input"].to!string);
+                auto fromCity = input["from-city"].to!string;
+                auto toCity = input["to-city"].to!string;
+                auto date = input["date"].to!string;
+
+                auto res = cn.getCruisesBeforeStartDate(fromCity, toCity, date);
+
+                socket.send(res);
+            }
+            else if (rpc == "search-by-arrival-date") {
+                auto input = parseJsonString(json["input"].to!string);
+                auto fromCity = input["from-city"].to!string;
+                auto toCity = input["to-city"].to!string;
+                auto date = input["date"].to!string;
+
+                auto res = cn.getCruisesBeforeArrivalDate(fromCity, toCity, date);
+
+                socket.send(res);
+            }   
+            else if (rpc == "find-fastest") {
+                auto input = parseJsonString(json["input"].to!string);
+                auto fromCity = input["from-city"].to!string;
+                auto toCity = input["to-city"].to!string;
+                auto res = cn.getFastestCruise(fromCity, toCity);
+
+                socket.send(res);
+            }
+            else if (rpc == "average-speed-by-type") {
+                auto input = parseJsonString(json["input"].to!string);
+                auto type = input["type"].to!string;
+                auto res = cn.getAvgSpeedByType(type);
+
+                socket.send(res);
+            }
+        }
+    }));
+
+    auto settings = new HTTPServerSettings;
+    settings.port = 8080;
+    listenHTTP(settings, router);
+    runApplication();
+}
+                    </pre>
+
+                    <br>
+
+                    <pre>
+module source.city;
+
+import std.datetime.date;
+
+class City
+{
+    string name;
+    Date arrivalDate;
+    int distance;
+
+    this(string name, Date arrivalDate) {
+        this.name = name;
+        this.arrivalDate = arrivalDate;
+    } 
+}
+                    </pre>
+
+                    <br>
+
+                    <pre>
+module source.cruise;
+
+import std.datetime.date;
+import std.random : rndGen;
+
+abstract class Cruise
+{
+    protected string fromCity;
+    protected string toCity;
+    protected Date startDate;
+    protected int distance;
+    protected bool againstTheCurrent;
+    protected int id = -1;
+    protected static int objCount = 0;
+
+    this(string fromCity, string toCity, Date startDate, int distance) {
+        this.fromCity = fromCity;
+        this.toCity = toCity;
+        this.startDate = startDate;
+        this.distance = distance;
+        this.againstTheCurrent = rndGen().front() % 2 == 1 ? true : false;
+        this.objCount++;
+        this.id = objCount;
+    }
+
+    void print();
+    string toJson();
+
+    string getFromCity() {
+        return fromCity;
+    }
+
+    string getToCity() {
+        return toCity;
+    }
+
+    Date getStartDate() {
+        return  startDate;
+    }
+
+    int getId() {
+        return id;
+    }
+}
+                    </pre>
+
+                    <br>
+
+                    <pre>
+module source.cruisenetwork;
+
+import source.cruisetype : CruiseType, Type;
+import std.algorithm;
+import std.conv;
+import core.time : Duration;
+import std.datetime.date;
+import std.algorithm.sorting : sort;
+import std.string : strip;
+
+class CruiseNetwork
+{
+    private CruiseType[] cruises;
+
+    this(CruiseType[] cruises) {
+        this.cruises = cruises;
+    }
+
+    string getCruisesFromTo(string fromCity, string toCity) {
+        auto matches = cruises.filter!(cruise => cruise.getFromCity() == fromCity && cruise.getToCity() == toCity);
+        string result = "[ ";
+
+        foreach (CruiseType key; matches) {
+            result ~= key.toJson() ~ ", ";
+        }
+
+        result = result.strip(", ");
+
+        result ~= " ]";
+
+        return result;
+    }
+
+    string getCruisesBeforeStartDate(string fromCity, string toCity, string startDate) {
+        auto matches = cruises.filter!(cruise => cruise.getFromCity() == fromCity && cruise.getToCity() == toCity);
+        string result = "[ ";
+
+        foreach (CruiseType key; matches) {
+            Duration diff = Date.fromISOExtString(startDate) - key.getStartDate();
+
+            if (diff.total!"days" < 0) {
+                result ~= key.toJson() ~ ", ";
+            }
+        }
+
+        result = result.strip(", ");
+        result ~= "]";
+
+        return result;
+    }
+    
+    string getCruisesBeforeArrivalDate(string fromCity, string toCity, string arrivalDate) {
+        auto matches = cruises.filter!(cruise => cruise.getFromCity() == fromCity && cruise.getToCity() == toCity);
+        string result = "[ ";
+
+        foreach (CruiseType key; matches) {
+            Duration diff = Date.fromISOExtString(arrivalDate) - Date.fromISOExtString(key.getDateOfArrival(toCity));
+
+            if (diff.total!"days" < 0) {
+                result ~= key.toJson() ~ ", ";
+            }
+        }
+
+        result = result.strip(", ");
+        result ~= "]";
+
+        return result;
+    }
+
+    string getFastestCruise(string fromCity, string toCity) {
+        alias cmp = (x, y) => x.getTravelTime() > y.getTravelTime();
+
+        cruises.sort!(cmp);
+
+        return cruises.filter!(cruise => cruise.getFromCity() == fromCity && cruise.getToCity() == toCity).front().toJson();
+    }
+
+    string getAvgSpeedByType(string type) {
+        Type t;
+        string result;
+
+        switch (type) {
+            case "EXPRESS": t = Type.EXPRESS; break;
+            default: t = Type.PASSANGER; break;
+        }
+
+        result = "[ ";
+
+        for (int i = 0; i < cruises.length; ++i) {
+            if (cruises[i].getType() == t)
+            result ~= cruises[i].toJson() ~ ", ";
+        }
+
+        result = result.strip(", ");
+        result ~= " ]";
+
+        return result;
+    }
+} 
+                    </pre>
+
+                    <br>
+
+                    <pre>
+module source.cruisetype;
+
+import source.cruise;
+import source.city;
+import std.datetime.date;
+import std.stdio;
+import std.conv;
+import std.json;
+import core.time : Duration;
+import std.random;
+
+enum Type {
+    EXPRESS,
+    PASSANGER
+}
+
+class CruiseType : Cruise
+{
+    private Type type;
+    private Date arrivalDate;
+    private City[] interStops;
+    private int position;
+
+    this(string fromCity, string toCity, Type type, Date startDate, Date arrivalDate, int distance) {
+        super(fromCity, toCity, startDate, distance);
+        this.type = type;
+        this.arrivalDate = arrivalDate;
+        this.position = -1;
+    }
+
+    void addIntermediateStop(string city, Date date) {
+        interStops ~= new City(city, date);
+
+        regenerateDistances(0);
+    }
+
+    void regenerateDistances(int adjust) {
+        for (int i = 0; i < interStops.length; ++i) {
+            if (i == position) {
+                interStops[i].distance = 0;
+                continue;
+            }
+
+            int initialDistance = distance / ((cast(int)interStops.length + 1) + adjust);
+            int randomDistance = 0;
+
+            if (i % 2 == 0) {
+                randomDistance = initialDistance + rndGen().front() % 100;
+                rndGen().popFront();
+            }
+            else {
+                randomDistance = initialDistance - rndGen().front % 100;
+                rndGen().popFront();
+            }
+
+            if (i == 0) {
+                interStops[i].distance = randomDistance;
+            } 
+            else {
+                int totalDistance = randomDistance;
+                for (int j = 0; j < interStops.length; ++j) {
+                    totalDistance += interStops[j].distance;
+                }
+                interStops[i].distance = totalDistance;
+            }
+        }
+    }
+
+    City[] getIntermediateStops() {
+        return interStops;
+    }
+
+    override string toJson() {
+        auto data = "{ \"id\": " ~ to!string(getId()) ~ ", " 
+            ~ "\"type\": \"" ~ to!string(type) 
+            ~ "\", \"from\": \"" ~ fromCity 
+            ~ "\", \"to\": \"" ~ toCity 
+            ~ "\", \"start_date\": \"" ~ startDate.toISOExtString() 
+            ~ "\", \"arrival_date\": \"" ~ arrivalDate.toISOExtString() 
+            ~ "\", \"distance\": " ~ to!string(getDistance()) 
+            ~ ", \"travel_time\": " ~ to!string(getTravelTime())
+            ~ ", \"avg_speed\": " ~ to!string(getAvgSpeed())
+            ~ ", \"intermediate_stops\": ["; 
+
+        for (int i = 0; i < interStops.length; ++i) {
+            data ~= "{ \"city\": \"" ~ interStops[i].name 
+            ~ "\", \"distance\": " ~ to!string(interStops[i].distance) 
+            ~ ", \"date\": \"" ~ interStops[i].arrivalDate.toISOExtString() 
+            ~ "\" } ";
+            if (i != interStops.length - 1) {
+                data ~= ", ";
+            }
+        }
+
+        data ~= "] }";
+
+        return data;
+    }
+
+    override void print() {
+        writeln(this.toJson());
+    }
+
+    long getTravelTime() {
+        Duration time = position == -1
+            ? cast(Date) arrivalDate - startDate
+            : cast(Date) arrivalDate - interStops[position].arrivalDate;
+
+        if (againstTheCurrent) {
+            return time.total!"days" + 2; 
+        }
+        else {
+            return time.total!"days";
+        }
+    }
+
+    float getAvgSpeed() {
+        return getDistance() / getTravelTime();
+    }
+
+    void advancePosition() {
+        if (position < interStops.length + 1) {
+            this.position += 1;
+            writeln("pos", position);
+
+            regenerateDistances(position);
+        }
+    }
+
+    int getPosition() {
+        return position;
+    }
+
+    int getDistance() {
+        if (position == -1) {
+            return distance;
+        }
+        
+        if (position == interStops.length) {
+            return 0;
+        }
+
+        int coveredDistance = 0;
+        for (int i = position; i < interStops.length; ++i) {
+            coveredDistance += interStops[i].distance;
+        }
+
+        return distance - coveredDistance;
+    }
+
+    string getDateOfArrival(string city) {
+        if (city == fromCity) {
+            return startDate.toISOExtString();
+        }
+
+        foreach (City key; interStops) {
+            if (key.name == city) {
+                return key.arrivalDate.toISOExtString();
+            }
+        }
+
+        return arrivalDate.toISOExtString();        
+    }
+
+    int getDistanceBetweenStartAnd(string city) {
+        if (city == toCity) {
+            return distance;
+        }
+
+        foreach (City key; interStops) {
+            if (key.name == city) {
+                return key.distance;
+            }
+        }
+
+        return 0;
+    }
+
+    long getTravelTimeTo(string city) {
+        if (city == toCity) {
+            return getTravelTime();
+        }
+
+        foreach (City key; interStops) {
+            if (key.name == city) {
+                Duration time = cast(Date)key.arrivalDate - startDate;
+                return time.total!"days";
+            }
+        }
+
+        return 0;
+    }
+
+    Type getType() {
+        return type;
+    }
+}
+                    </pre>
                 </div>
             </div>
         </div>
